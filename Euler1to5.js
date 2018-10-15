@@ -45,3 +45,33 @@ for(let i=1;i<toFactor/2;i++){
 console.log(largestFac);//takes too long to run with Javascript haha, but works with problem example number
 
 //Problem 4
+//define palindrone check function, slicing method is to clone, modify, and compare to original, need array.reverse so must work in arrays
+let palinCheck=function(num){
+    let stringArr=(num.toString()).split("");
+    let stringClone=stringArr.slice();
+    if(stringClone.reverse().join("") === stringArr.join("")){
+        return true
+    }
+    else{
+        return false
+    }
+}
+//loop through ranges and find largest, factor one and two pick up the palindrome's factors
+let largestPalin=1;
+let factorOne=0;
+let factorTwo=0;
+for(i=100;i<1000;i++){
+    for(j=100;j<1000;j++){
+        if(palinCheck(i*j)){
+            if(i*j>largestPalin){
+                largestPalin=i*j;
+                factorOne=i;
+                factorTwo=j;
+            }
+        }
+    }
+}
+console.log(largestPalin)//906609
+
+//Problem 5
+
