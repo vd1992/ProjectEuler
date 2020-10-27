@@ -104,3 +104,21 @@ for(let i=headacheNumber; i>0; i=i+headacheNumber){
 //The answer is 232792560
 
 //Problem 6
+//sum up the squares of the numbers from 1-100
+let sumSquares=0;
+for(let i=1; i<101; i++){
+	sumSquares=sumSquares+i*i;  
+}
+
+//sum up 1-100 then square it
+let squareSums=0
+for(let i=1; i<101; i++){
+	squareSums=squareSums+i;  
+}
+squareSums=squareSums*squareSums;
+
+//log the difference between the two results
+console.log(squareSums-sumSquares);
+//25164150
+
+//Problem 7
