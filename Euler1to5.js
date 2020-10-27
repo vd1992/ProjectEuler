@@ -74,4 +74,33 @@ for(i=100;i<1000;i++){
 console.log(largestPalin)//906609
 
 //Problem 5
+//factor check function, number argument and run through 1-20 to check divisibility
+//continues to end and return True or fails at a point, breaks and returns False
+let factorCheck=function(num){
+	for(let i=1; i<21; i++){
+      if(num%i==0){
+        continue;
+      }
+      else{
+        return false;
+      }
+    }
+  	return true;
+}
 
+//reducing numbers to test speeds things up, LCM of 11, 13, 19 helps narrow numbers to test
+//then iterate through multiples of that number, execute function and break on True
+let headacheNumber=11*13*19;
+for(let i=headacheNumber; i>0; i=i+headacheNumber){
+	if(factorCheck(i)){
+    	console.log("The answer is " + i);
+      	break;
+    }
+  	else{
+      continue;
+    }  
+}
+ 
+//The answer is 232792560
+
+//Problem 6
