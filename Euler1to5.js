@@ -78,13 +78,13 @@ console.log(largestPalin)//906609
 //continues to end and return True or fails at a point, breaks and returns False
 let factorCheck=function(num){
 	for(let i=1; i<21; i++){
-      if(num%i==0){
-        continue;
-      }
-      else{
-        return false;
-      }
-    }
+      		if(num%i==0){
+        		continue;
+      		}
+      		else{
+        		return false;
+      		}
+    	}
   	return true;
 }
 
@@ -93,12 +93,12 @@ let factorCheck=function(num){
 let headacheNumber=11*13*19;
 for(let i=headacheNumber; i>0; i=i+headacheNumber){
 	if(factorCheck(i)){
-    	console.log("The answer is " + i);
-      	break;
-    }
+    		console.log("The answer is " + i);
+      		break;
+    	}
   	else{
-      continue;
-    }  
+      		continue;
+    	}  
 }
  
 //The answer is 232792560
