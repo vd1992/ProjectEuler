@@ -122,3 +122,38 @@ console.log(squareSums-sumSquares);
 //25164150
 
 //Problem 7
+let primeCheck = function(num){
+ 	let counter = Math.floor(num/2);
+  	for(let i=2; i<counter+1; i++){
+    		if(num%i === 0){
+        		return false;
+        	}
+      		else{
+        		continue;
+        	}
+    	}
+  	return true;
+}
+
+let nthPrime = function(n){
+	let primes = 2;
+	let successCounter = 0;
+	while(true){
+  		if(primeCheck(primes)){
+  			successCounter++;
+    			if(successCounter === n){
+      				return(primes);
+            		}
+    			primes++;
+  		}
+  		else{
+    			primes++;
+    			continue;
+  		}
+	}
+}
+
+console.log(nthPrime(10001));
+//104743
+
+//Problem 8
